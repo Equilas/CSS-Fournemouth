@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+
+figure.eqedition {
+	font-family: 'Raleway', Arial, sans-serif;
+	position: relative;
+	overflow: hidden;
+	width: 500px;
+	max-width: 500px;
+	width: 100%;
+	background: #34495e;
+	color: #444444;
+	text-align: justify;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	font-size: 14px;
+}
+
+figure.eqedition * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.35s ease;
+	transition: all 0.35s ease;
+}
+
+figure.eqedition img {
+	max-width: 100%;
+	vertical-align: top;
+}
+
+figure.eqedition .image {
+	position: relative;
+	border-bottom: 4px solid #34495e;
+	z-index: 1;
+}
+
+figure.eqedition .image:before {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 20px 0 20px;
+	border-color: #34495e transparent transparent transparent;
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -15px);
+	transform: translate(-50%, -15px);
+	z-index: -1;
+	-webkit-transition: all 0.35s ease;
+	transition: all 0.35s ease;
+}
+
+figure.eqedition .image p {
+	font-weight: 500;
+	margin: 0;
+	padding: 0 30px;
+	line-height: 1.6em;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	color: #eeeeee;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	opacity: 0;
+	font-style: italic;
+}
+
+figure.eqedition figcaption {
+	background-color: #111111;
+	padding: 25px;
+}
+
+figure.eqedition h3 {
+	margin: 0 0 5px;
+	text-transform: uppercase;
+	font-weight: 400;
+	text-align: center;
+}
+
+figure.eqedition h3 span {
+	font-weight: 800;
+}
+
+figure.eqedition h5 {
+	margin: 0 0 15px;
+	font-weight: 400;
+	text-align: center;
+}
+
+figure.eqedition i {
+	background-color: #34495e;
+	color: #111111 !important;
+}
+
+figure.eqedition b{
+	color: #34495e;
+}
+
+figure.eqedition:hover .image:before,
+figure.eqedition.hover .image:before {
+	border-color: #34495e transparent transparent transparent;
+	-webkit-transform: translate(-50%, 0px);
+	transform: translate(-50%, 0px);
+}
+figure.eqedition:hover .image p,
+figure.eqedition.hover .image p {
+	opacity: 1;
+}
+
+figure.eqedition:hover img,
+figure.eqedition.hover img {
+	opacity: 0.2;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
